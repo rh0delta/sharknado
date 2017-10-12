@@ -6,6 +6,9 @@ This application has been created to fetch and parse the html content of a webpa
 
 ### GET /pages
 
+#### Sample Request
+`curl -X GET http://<api base url (for development: localhost:3000)>/pages`
+
 Returns all pages currently indexed in the database.
 
 ### POST /pages/parse
@@ -14,6 +17,8 @@ Returns all pages currently indexed in the database.
 |--------|----------------|--------------|-------------|
 | `url` | `string` | `http://example.com` | Url to parse and retrieve html content from. |
 
+#### Sample Request
+`curl -v -H "Accept:application/json" -H "Content-Type: application/json" -X POST -d '{"page":{"url":"<url to be parsed>"}}' --silent http://<api base url (for development: localhost:3000)>/pages/parse`
 
 ## Specifications
 
